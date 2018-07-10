@@ -1,0 +1,19 @@
+Käyttäjä -> Selain: kirjoittaa kenttään ja klikkaa lisää -painiketta
+
+Selain->+Palvelin: HTTP POST /new_note + pyynnön rungossa form-data 
+Palvelin-->-Selain: HTTP 302 found + tyhjä vastaus
+
+Selain->+Palvelin: HTTP GET /notes
+Palvelin-->-Selain: HTTP 200 OK + vastaus
+
+Selain -> Selain: parsii vastauksen
+
+Selain->+Palvelin: HTTP GET /main.js
+Palvelin-->-Selain: HTTP 200 OK + vastaus
+
+Selain -> Selain: suorittaa main.js:n
+
+Selain->+Palvelin: HTTP GET /data.json
+Palvelin-->-Selain: HTTP 200 OK + vastaus
+
+Selain -> Käyttäjä: Näytetään sivu

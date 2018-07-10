@@ -1,0 +1,8 @@
+Käyttäjä -> Selain: käyttäjä kirjoittaa kenttään jotain ja klikkaa lisää painiketta
+
+Selain->+Palvelin: HTTP POST /new_note_spa + rungossa data
+Palvelin-->-Selain: HTTP 201 OK + vastaus (note created)
+
+Selain -> Selain: parsii vastauksen
+
+Selain -> Käyttäjä: Näytetään sivu
